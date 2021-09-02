@@ -45,4 +45,4 @@ server.get("/highscore/:score", function(req, res, next) {
 });
 
 server.listen(port);
-console.log("run")
+//console.log("run");
