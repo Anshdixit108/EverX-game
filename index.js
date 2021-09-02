@@ -18,10 +18,7 @@ bot.on("callback_query", function (query) {
   } else {
     queries[query.id] = query;
     let gameurl = "https://everx-game.herokuapp.com/index.html?id="+query.id;
-    bot.answerCallbackQuery({
-      callback_query_id: query.id,
-      url: gameurl
-    });
+    bot.answerCallbackQuery(query.id, {url: gameurl, show_alert: true});
   }
 });
 
@@ -48,3 +45,4 @@ server.get("/highscore/:score", function(req, res, next) {
 });
 
 server.listen(port);
+console.log("run")
