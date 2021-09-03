@@ -128,7 +128,7 @@ gameWorld.prototype.removeDeadObjects = function() {
         var playerid = url.searchParams.get("id");
 
         var xmlhttp = new XMLHttpRequest();
-          var url1 = "https://t.me/EverX_bot?game=EverX/highscore/" + this.score  +
+          var url1 = "https://everxgame.herokuapp.com/highscore/" + this.score  +
         "?id=" + playerid;
           xmlhttp.open("GET", url1, true);
           xmlhttp.send();
