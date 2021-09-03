@@ -96,9 +96,8 @@ $(function() {
   
   //make updates for mobile
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-    cvs.style.width = window.innerWidth + 'px';
-    cvs.style.height = window.innerHeight + 'px';
-    cvs.height = window.innerHeight * (cvs.width / window.innerWidth);
+    cvs.width = window.innerWidth;
+
   }
   
   
@@ -113,7 +112,7 @@ $(function() {
   
   //various UI buttons
   var startBox = new clickBox({
-      x: 500,
+      x: 0.5*cvs.width,
       y: 380,
       w: 100,
       h: 60,
