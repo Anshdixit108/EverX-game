@@ -17,7 +17,7 @@ bot.on("callback_query", function (query) {
     bot.answerCallbackQuery(query.id, "Sorry, '" + query.game_short_name + "' is not available.");
   } else {
     queries[query.id] = query;
-    let gameurl = "https://everx-game.herokuapp.com/index.html?id="+query.id;
+    let gameurl = "https://everxgame.herokuapp.com/index.html?id="+query.id;
     bot.answerCallbackQuery(query.id, {url: gameurl, show_alert: true});
   }
 });
