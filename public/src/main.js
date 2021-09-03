@@ -95,9 +95,17 @@ $(function() {
   
   
   //make updates for mobile
-  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) 
+  {
+    cvs.style.width = window.innerWidth;
+    cvs.style.height = 460;
+    //cvs.height = (window.innerHeight * (cvs.width / window.innerWidth));
     cvs.width = window.innerWidth;
-
+    //cvs.height = window.innerHeight/2;
+    //ctx.scale(1,0.5);
+    //resizeTo(canvas,0.5,0.5)
+    //cvs.width = 500;
+    //cvs.height = 460;
   }
   
   
@@ -112,8 +120,9 @@ $(function() {
   
   //various UI buttons
   var startBox = new clickBox({
-      x: 0.5*cvs.width,
-      y: 380,
+      //x: 500,
+      x:350/700*cvs.width,
+      y: cvs.height-80,
       w: 100,
       h: 60,
       active: true,
@@ -200,7 +209,8 @@ $(function() {
     var t = getTouchPos(cvs, evt.touches[0].x, evt.touches[0].y);
     //ctx.fillText(t.x + ', ' + t.y, 100,100);
       
-    if (startBox.testClick(t.x, t.y)) {
+    if (startBox.testClick(t.x, t.y)) 
+    {
       startBox.active = false;
       startGame();
     }
