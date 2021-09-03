@@ -96,9 +96,10 @@ $(function() {
   
   //make updates for mobile
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ) {
-    //cvs.style.width = window.innerWidth + 'px';
-    //cvs.style.height = window.innerHeight + 'px';
-    //cvs.height = window.innerHeight * (cvs.width / window.innerWidth);
+    cvs.width= 360;
+    cvs.style.width = window.innerWidth + 'px';
+    cvs.style.height = window.innerHeight + 'px';
+    cvs.height = window.innerHeight * (cvs.width / window.innerWidth);
   }
   
   
